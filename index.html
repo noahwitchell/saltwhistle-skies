@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Saltstone Isles has moved</title>
+<style>body{background:#241c2e;color:#f3e7cf;font:16px/1.5 system-ui;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center}a{color:#f1c84a}</style>
+<p>Saltstone Isles has moved.<br><a id="go" href="/saltstone-isles/">Open the game</a></p>
+<script>
+// forwards the old home-screen icon to the game's new address (same site, so saved progress comes along)
+(async()=>{try{if('serviceWorker' in navigator){const rs=await navigator.serviceWorker.getRegistrations();for(const r of rs)if(r.scope.includes('/saltwhistle-skies/'))await r.unregister();}
+  if(self.caches){for(const k of await caches.keys())if(/^tac-/.test(k))await caches.delete(k);}}catch(e){}
+  location.replace('/saltstone-isles/');})();
+</script>
